@@ -13,6 +13,21 @@ DPDK RSS support.
 So here it is.
 
 ## How to setup
+0.安装libdnet
+    apt-get install libdumbnet-dev libdnet-dev
+
+build.sh
+-----------------------------------------------------
+#!/bin/sh
+
+dpdk_home=~/proj/dpdk/x86_64-native-linuxapp-gcc
+
+sudo apt-get install libdumbnet-dev libdnet-dev
+
+./configure --with-dpdk-includes=${dpdk_home}/include --with-dpdk-libraries=${dpdk_home}/lib
+
+#--with-dnet=/usr/local/include
+-----------------------------------------------------
 
 1. Download DPDK 16.07 and build it
 
